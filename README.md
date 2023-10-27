@@ -4,7 +4,8 @@
 ## Schritt 1: HTML
 Erstelle die HTML-Struktur für die Webseite. Die Webseite sollte folgende Elemente enthalten:
 
-1. Einen Titel, der den Namen des Restaurants enthält.
+0. Erstelle eine index.html-Datei für die Webseite
+1. Einen Titel, der den Namen des Restaurants enthält. Der Titel soll McDonals sein.
 2. Einen Header-Bereich mit einem Navigationsmenü, das Links zu den verschiedenen Abschnitten der Seite enthält, wie z.B. "Speisekarte", "Über uns" und "Kontakt".
 3. Einen Abschnitt für die Speisekarte des Restaurants. Erstelle 5 Einträge.
 4. Einen Abschnitt "Über uns", in dem du eine kurze Beschreibung des Restaurants verfasst.
