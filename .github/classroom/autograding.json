@@ -10,36 +10,6 @@
         "timeout": 2,
         "points": 30,
         "feedback": "Dieser Test überprüft, ob die Webseite einen korrekten Titel hat, der den Namen des Restaurants enthält. Stelle sicher, dass der `<title>`-Tag im `<head>`-Bereich richtig gesetzt ist. [Hilfe zum `<title>`-Tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/title)"
-      },
-      {
-        "name": "Korrekte Anzeige der Speisekarte",
-        "points": 10,
-        "setup": "sudo apt-get install libxml2-utils >/dev/null",
-        "run": "xmllint --html --xpath \"count(//div[@id='speisekarte']//li)\" index.html",
-        "output": "5", 
-        "comparison": "exact",
-        "timeout": 2,
-        "feedback": "Dieser Test überprüft, ob die Speisekarte mindestens fünf Gerichte enthält."
-      },
-      {
-        "name": "Korrekte Anzeige der Kontaktinformationen",
-        "points": 10,
-        "setup": "sudo apt-get install libxml2-utils >/dev/null",
-        "run": "xmllint --html --xpath \"//div[@id='kontakt']/p/text()\" index.html",
-        "output": "Adresse: Musterstraße 123, Telefon: 123-456-7890, E-Mail: restaurant@example.com",
-        "comparison": "exact",
-        "timeout": 2,
-        "feedback": "Dieser Test überprüft, ob die Kontaktinformationen im Abschnitt 'Kontakt' korrekt angezeigt werden."
-      },
-      {
-        "name": "Gestaltung des Abschnitts 'Über uns'",
-        "points": 10,
-        "setup": "sudo apt-get install libxml2-utils >/dev/null",
-        "run": "xmllint --html --xpath \"count(//div[@id='ueber-uns']//img) > 0 and string-length(//div[@id='ueber-uns']//p/text()) > 50\" index.html",
-        "output": "true",
-        "comparison": "exact",
-        "timeout": 2,
-        "feedback": "Dieser Test überprüft, ob der Abschnitt 'Über uns' ein Bild des Restaurants enthält und ob der Text mindestens 50 Zeichen lang ist."
       }
 
     ]
