@@ -1,0 +1,109 @@
+{
+    "tests": [
+      {
+        "name": "Existenz des Titels",
+        "points": 5,
+        "setup": "",
+        "run": "document.title",
+        "expected": "Name des Restaurants",
+        "feedback": "Dieser Test überprüft, ob die Webseite einen korrekten Titel hat, der den Namen des Restaurants enthält. Stelle sicher, dass der `<title>`-Tag im `<head>`-Bereich richtig gesetzt ist. [Hilfe zum `<title>`-Tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/title)"
+      },
+      {
+        "name": "Korrekte Navigationslinks",
+        "points": 10,
+        "setup": "",
+        "run": "document.querySelectorAll('header a').length",
+        "expected": 3,
+        "feedback": "Dieser Test stellt sicher, dass die Navigationslinks im Header-Bereich vorhanden sind und die richtige Anzahl haben. Überprüfe, ob die Links korrekt erstellt und verknüpft sind. [Hilfe zu HTML-Links](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a)"
+      },
+      {
+        "name": "Korrekte Anordnung der Navigationslinks",
+        "points": 10,
+        "setup": "",
+        "run": "document.querySelectorAll('header a')[0].textContent",
+        "expected": "Speisekarte",
+        "feedback": "Dieser Test überprüft, ob der erste Navigationslink 'Speisekarte' enthält. Stelle sicher, dass die Links in der richtigen Reihenfolge und mit den korrekten Texten erstellt sind."
+      },
+      {
+        "name": "Korrekte Anordnung der Navigationslinks",
+        "points": 10,
+        "setup": "",
+        "run": "document.querySelectorAll('header a')[1].textContent",
+        "expected": "Über uns",
+        "feedback": "Dieser Test überprüft, ob der zweite Navigationslink 'Über uns' enthält. Stelle sicher, dass die Links in der richtigen Reihenfolge und mit den korrekten Texten erstellt sind."
+      },
+      {
+        "name": "Korrekte Anordnung der Navigationslinks",
+        "points": 10,
+        "setup": "",
+        "run": "document.querySelectorAll('header a')[2].textContent",
+        "expected": "Kontakt",
+        "feedback": "Dieser Test überprüft, ob der dritte Navigationslink 'Kontakt' enthält. Stelle sicher, dass die Links in der richtigen Reihenfolge und mit den korrekten Texten erstellt sind."
+      },
+      {
+        "name": "Korrekte Anzeige der Speisekarte",
+        "points": 15,
+        "setup": "",
+        "run": "document.querySelectorAll('#speisekarte ul li').length",
+        "expected": 5,
+        "feedback": "Dieser Test überprüft, ob die Speisekarte mindestens fünf Gerichte enthält und ob sie in einer geordneten Liste angezeigt werden. Stelle sicher, dass die Speisekarte korrekt strukturiert ist."
+      },
+      {
+        "name": "Korrekte Anzeige der Kontaktinformationen",
+        "points": 15,
+        "setup": "",
+        "run": "document.querySelector('#kontakt p').textContent",
+        "expected": "Adresse: Musterstraße 123, Telefon: 123-456-7890, E-Mail: restaurant@example.com",
+        "feedback": "Dieser Test überprüft, ob die Kontaktinformationen im Abschnitt 'Kontakt' korrekt angezeigt werden. Stelle sicher, dass die Informationen gut lesbar und vollständig sind."
+      },
+      {
+        "name": "Styling des Headers",
+        "points": 5,
+        "setup": "",
+        "run": "getComputedStyle(document.querySelector('header')).backgroundColor",
+        "expected": "rgb(0, 0, 255)",
+        "feedback": "Dieser Test überprüft, ob der Header eine blaue Hintergrundfarbe hat. Überprüfe das Styling des Headers, um sicherzustellen, dass die Hintergrundfarbe korrekt ist. [Hilfe zur CSS-Hintergrundfarbe](https://developer.mozilla.org/en-US/docs/Web/CSS/background-color)"
+      },
+      {
+        "name": "Styling der Navigationslinks",
+        "points": 5,
+        "setup": "",
+        "run": "getComputedStyle(document.querySelectorAll('header a')[0]).color",
+        "expected": "rgb(0, 128, 0)",
+        "feedback": "Dieser Test überprüft, ob die Farbe der Navigationslinks grün ist. Überprüfe das Styling der Links, um sicherzustellen, dass die Textfarbe korrekt ist. [Hilfe zur CSS-Textfarbe](https://developer.mozilla.org/en-US/docs/Web/CSS/color)"
+      },
+      {
+        "name": "Styling der Navigationslinks bei Hover",
+        "points": 5,
+        "setup": "",
+        "run": "getComputedStyle(document.querySelectorAll('header a')[0]).color",
+        "expected": "rgb(255, 0, 0)",
+        "feedback": "Dieser Test überprüft, ob die Farbe der Navigationslinks rot wird, wenn der Benutzer mit der Maus darüber fährt. Überprüfe das Styling der Links im Hover-Zustand. [Hilfe zur CSS-Pseudoklasse :hover](https://developer.mozilla.org/en-US/docs/Web/CSS/:hover)"
+      },
+      {
+        "name": "Gestaltung der Speisekarte",
+        "points": 10,
+        "setup": "",
+        "run": "getComputedStyle(document.querySelector('#speisekarte ul')).listStyleType",
+        "expected": "disc",
+        "feedback": "Dieser Test überprüft, ob die Speisekarte als ungeordnete Liste mit Aufzählungspunkten (disc) dargestellt wird. Überprüfe das Styling der Speisekarte, um sicherzustellen, dass die Aufzählungspunkte korrekt sind. [Hilfe zur CSS-Listentyp](https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-type)"
+      },
+      {
+        "name": "Gestaltung des Abschnitts 'Über uns'",
+        "points": 10,
+        "setup": "",
+        "run": "document.querySelector('#ueber-uns img') != null && document.querySelector('#ueber-uns p').textContent.length > 50",
+        "expected": true,
+        "feedback": "Dieser Test überprüft, ob der Abschnitt 'Über uns' ein Bild des Restaurants enthält und ob der Text mindestens 50 Zeichen lang ist. Stelle sicher, dass der Abschnitt ansprechend gestaltet ist und ausreichend Text enthält. [Hilfe zur Bildverwendung in HTML](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img)"
+      },
+      {
+        "name": "Gestaltung des Abschnitts 'Kontakt'",
+        "points": 10,
+        "setup": "",
+        "run": "getComputedStyle(document.querySelector('#kontakt')).backgroundColor",
+        "expected": "rgb(255, 255, 0)",
+        "feedback": "Dieser Test überprüft, ob der Abschnitt 'Kontakt' eine gelbe Hintergrundfarbe hat. Überprüfe das Styling des Kontakt-Abschnitts, um sicherzustellen, dass die Hintergrundfarbe korrekt ist. [Hilfe zur CSS-Hintergrundfarbe](https://developer.mozilla.org/en-US/docs/Web/CSS/background-color)"
+      }
+    ]
+  }
+  
